@@ -1,5 +1,5 @@
 window.config = {
- gameName:"Collectibles",
+ gameName:"Doge Coin",
  // https://emojipedia.org/  leave as "" if you want no emoji
  emoji:"💫",
  // https://www141.lunapic.com/editor/  http://icoconvert.com/
@@ -7,7 +7,7 @@ window.config = {
  theme:{
   // https://fonts.google.com/ examples: Kirang Haerang, Megrim, Permanent Marker, Orbitron, Monoton
   fontFamily:"Cabin Sketch",
-  fontColor:"#063684",
+  fontColor:"#e89d25",
   formColor:"#f7d85d",
   overlayColor:"rgba(226, 204, 136, 0.8)",
   fontSize:2
@@ -54,16 +54,16 @@ window.config = {
   ground:"",
   groundYScale:5,
   groundTexture:"",
-  groundColor:"",
-  groundColor2:"",
-  grid:"",
+  groundColor:"#f4a52e",
+  groundColor2:"#ffe500",
+  grid:"2x2",
   gridColor:"",
   lighting:"",
   lightPosition:""
  },
  //Soundcloud track numbers from share/embed code
  bgm:{
-  songs: [326544627],
+  songs: [187387623],
   volume: 0.1,
   playAll: true,
   initialDelay: 5000
@@ -102,11 +102,12 @@ window.config = {
  collectibles:{
    threshold:3,
    itemDefs:[
-     {type:'clock',scale:'0.1 0.1 0.1',rotation:'0 0 0',positions:['0 0 -95','-20 0 -25'],
-      url:'https://cdn.glitch.com/162b879e-fd42-40d9-8519-671d783b8c70%2Fclock.glb?1538858467717',
-      objectSound:{url:'https://cdn.glitch.com/162b879e-fd42-40d9-8519-671d783b8c70%2Ftick_tock.mp3?1538858557825',volume:1},
-      collectSound:{url:'https://cdn.glitch.com/162b879e-fd42-40d9-8519-671d783b8c70%2Fyay.mp3?1538839840045',volume:1},
-      callback:'addPoint'
+     {type:'doge_coin',scale:'0.4 0.4 0.4',rotation:'0 0 0',
+      positions:['25 0 -25','-25 0 -25','20 0 -30','-20 0 -30','15 0 -35','-15 0 -35','10 0 -40','-10 0 -40'],
+      url:'https://cdn.glitch.com/14597f75-728f-4d7e-bbd2-202118ee70e0%2Fdoge_coin.glb?1542836614183',
+      objectSound:{url:'https://cdn.glitch.com/14597f75-728f-4d7e-bbd2-202118ee70e0%2Fdog_whine.mp3?1542837893113',volume:1},
+      collectSound:{url:'https://cdn.glitch.com/14597f75-728f-4d7e-bbd2-202118ee70e0%2Fcollect_bark_.mp3?1542837713162',volume:1},
+      callback:'addPoint',animation:'rotY'
      }  
    ]
  },
