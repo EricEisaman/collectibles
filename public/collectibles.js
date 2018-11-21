@@ -34,6 +34,22 @@ window.setCollectibles = ()=>{
       if(typeof def.callback != 'undefined'){
         col.setAttribute('callback',def.callback)
       }
+      if(typeof def.animation != 'undefined'){
+        switch(def.animation){
+          case 'custom': col.setAttribute('animation-mixer','')
+            break;
+          default:
+            let q = document.createElement('a-animation');
+            q.setAttribute('attribute','rotation');
+            q.setAttribute('from','0 0 0');
+            q.setAttribute('to','0 360 0');
+            q.setAttribute('direction','forward');
+            q.setAttribute('dur','3000');
+            q.setAttribute('repeat','indefinite');
+            q.setAttribute('easing','linear');
+            col.appendChild(q);                       
+        }
+      }
       scene.appendChild(col);
       window.collectibles.push(col);
       
